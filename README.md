@@ -22,6 +22,14 @@ and open file __index.html__ in your favorite browser:
 
 Take into account that if you have no connectivity, an alert message will appear ...
 
+also you can visit:
+
+You can visit the project by the url: http://52.59.22.103/neighborhood
+
+where the project runs ...
+
+I hope you like it ...
+
 ## Technology used ...
 
 In order to finish this project I have used:
@@ -34,6 +42,7 @@ In order to finish this project I have used:
 ## More ...
 
 Please before any doubt you can contact me at david.munoz4185@gmail.com
+
 
 
 
