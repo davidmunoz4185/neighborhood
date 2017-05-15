@@ -109,6 +109,7 @@ var Museum = function(museum){
 		    error: function (jqXHR, textStatus, errorThrown) {
 		        self.infoMuseum = '<div> Upps ... it seems neo4j is not available  ... </div>';
         		infowindow.setContent(self.infoMuseum);
+        		alert(errorThrown);
 		    }
 		});
 
