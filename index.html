@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<meta charset="utf-8">
+	<title>Visit Madrid´s Museums ...</title>
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./js/lib/jquery-3.2.1.js"></script>
+	<script src="./js/lib/knockout_v3.4.2.js"></script>
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h2>Madrid is Culture | Culture is Madrid</h2>
+				<div class="btn-group" role="group" aria-label="Controls">
+					<button type="button" class="btn btn-default toggle-sidebar">Hide Museum-List</button>	
+				</div>
+			</div>
+		</div>
+		<div class="row jumbotron" id="row-main">
+			<div class="col-md-3" id="sidebar">
+              	<input id="places-search" type="text" placeholder=" Museum Search ..." data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'">
+              	<ul class="results" id="results" data-bind="foreach: filteredList">
+					<li class="place" id="place" data-bind="text: title, click: bounce"></li>
+				</ul>
+			</div>
+			<div class="col-md-9" id="map">
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$(".toggle-sidebar").click(function () {
+				$("#sidebar").toggleClass("collapsed");
+				$("#map").toggleClass("col-md-12 col-md-9");
+				return false;
+			});
+		});
+	</script>
+	<script type="text/html" id="location"><li class="location-item" data-bind="text: title, click: openInfowindow"></li></script>
+  	<script type="text/javascript" src="./js/app.js"></script>
+  	<script 
+  		async defer 
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKF6HT0C44x_nQ3pf5jHNY0qRUXdg7fNk&callback=initMap&libraries=places" 
+  		onerror="errorConnection()">	
+  	</script>
+</body>
+</html>
