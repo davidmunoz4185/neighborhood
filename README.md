@@ -14,14 +14,13 @@ First of all, you have to clone the repository ...
 
 ```language
 git clone https://github.com/davidmunoz4185/neighborhood.git
-
 ```
 
 and open file __index.html__ in your favorite browser:
 
 ![App](IMGs/ScreenShot.jpg)
 
-Take into account that if you have no connectivity, an alert message can appear ...
+Take into account that if you have no connectivity, an alert message will appear ...
 
 ## Technology used ...
 
